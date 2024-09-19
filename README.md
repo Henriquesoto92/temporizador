@@ -1,0 +1,2 @@
+# temporizador
+zueira never ends
