@@ -36,7 +36,12 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  return (
+  const afterToday =
+    timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0;
+
+  // const afterToday = false;
+
+  return afterToday ? (
     <div className="flex flex-col h-[100vh] items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <h1 className="text-center text-4xl font-bold">
         Falta pouco para confraternização da{" "}
@@ -77,6 +82,30 @@ export default function Home() {
           playsInline
         />
       </div>
+    </div>
+  ) : (
+    <div className="flex flex-col h-[100vh] items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <h1 className="text-center text-4xl font-bold">
+        Quando vai ser a proxima confraternização da
+      </h1>
+      <Image
+        className="dark:invert"
+        src="https://cria.digital/wp-content/uploads/2022/07/cria.svg"
+        alt="CRIA logo"
+        width={180}
+        height={38}
+        priority
+      />
+      <h1 className="text-center text-4xl font-bold">?</h1>
+      <div className="mt-8">
+        <img
+          className="w-64 h-auto rounded-lg shadow-lg"
+          src="https://media.tenor.com/8dGugqxC4sAAAAAM/shocked-surprised.gif"
+          alt="GIF de surpresa"
+        />
+      </div>
+
+      <h1 className="text-center text-4xl font-bold">Aguardemos.....</h1>
     </div>
   );
 }
