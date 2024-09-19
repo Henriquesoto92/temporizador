@@ -42,7 +42,7 @@ export default function Home() {
   const afterToday = false;
 
   return afterToday ? (
-    <div className="flex flex-col h-[100vh] items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col items-center justify-center  p-8 gap-16 font-[family-name:var(--font-geist-sans)]">
       <h1 className="text-center text-4xl font-bold">
         Falta pouco para confraternização da{" "}
       </h1>
