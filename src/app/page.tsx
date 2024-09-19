@@ -36,10 +36,10 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  const afterToday =
-    timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0;
+  //const afterToday =
+  // timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0;
 
-  // const afterToday = false;
+  const afterToday = false;
 
   return afterToday ? (
     <div className="flex flex-col h-[100vh] items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
